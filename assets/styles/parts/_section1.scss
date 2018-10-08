@@ -1,0 +1,192 @@
+/* SECTION 1 */ 
+.section1 {
+    background-image: url("../images/code_hero.jpg");
+    @include sections(100%,100%,cover,no-repeat,bottom);
+    .section-wrapper {
+        padding-top: 90px;
+        padding-bottom: 90px;
+        .row {
+            .col-md-6 {
+                .head {
+                    .col-md-12 {
+                        padding-left: 0 !important;
+                        padding-bottom: 35px !important;
+                        h1 {
+                            line-height: 0.98em;
+                            @include fonts(58px,$roboto,white,bold,none);
+                        }
+                        h3 {
+                            @include fonts(26px,$robotoSlab,white,400,none);
+                        }
+                    }
+                }
+                .get-info {
+                    max-width: 80%;
+                    background-color: rgba(white, 0.7);
+                    border-radius: 5px;
+                    box-sizing: border-box;
+                    padding: 10px 0;
+                    .col-md-12 {
+                        h3 {
+                            text-align: center;
+                            @include fonts(32px,$roboto,black,bold,none);
+                        }
+                        span {
+                            display: block;
+                            text-align: center;
+                            padding-bottom: 7px;
+                            @include fonts(16px,$roboto,black,400,none);
+                        }
+                        form {
+                            .form-row {
+                                .col-6 {
+                                    .md-form {
+                                        input {
+                                            border-bottom: solid 2px ;
+                                            @include fonts(22px,$roboto,black,400,none);
+                                        }
+                                        label {
+                                            // margin-left: 27%;
+                                            @include fonts(22px,$roboto,black,400,none);
+                                        }
+                                    }
+                                }
+                            }
+                            .btn-submit {
+                                letter-spacing: 3px;
+                                line-height: 0.5em;
+                                width: 100%;
+                                background-color: $blue !important;
+                                border-radius: 5px !important;
+                                @include fonts(32px,$roboto,white,bold,none);
+                                &:hover {
+                                    background-color: $blue-hover !important;
+                                }    
+                            }
+                        }
+                    }
+                }
+            }
+            .data-wrapper {
+                .row {
+                    text-align: right;
+                    .coding {
+                        padding-bottom: 60px;
+                        h3 {
+                            @include fonts(32px,$roboto,$blue,bold,none);
+                            cursor: pointer;
+                        }
+                        p {
+                            @include fonts(20px,$roboto,$light-grey,400,none);
+                        }
+                        hr {
+                            margin-right: 0 !important;
+                            width: 73%;
+                            border: solid 3px $blue;
+                        }
+                    }
+                    .data-analytics {
+                        &:hover {
+                            h3 {
+                                   color:$blue;
+                            }
+                            hr {
+                                border: solid 3px $blue;
+                            }
+                        }
+                        cursor: pointer;
+                        h3 {
+                            @include fonts(32px,$roboto,white,bold,none);
+                        }
+                        p {
+                            @include fonts(20px,$roboto,$light-grey,400,none);
+                        }
+                        hr {
+                            margin-right: 0 !important;
+                            width: 68%;
+                            border: solid 3px white;
+                        }
+                    }
+                    .coding, .data-analytics {
+                        padding-right: 0 !important;
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        background-image: none;
+        background-color: white;
+        .section-wrapper {
+            margin: auto !important;
+            padding: 0 !important;
+            .row {
+                padding: 5px !important;
+                margin: 0 !important;
+                background-color: white!important;
+                .section-left {
+                    margin: 0 !important;
+                    padding: 0 !important;
+                    .get-info {
+                        max-width: 100% !important;;
+                    }
+                }
+            }
+        }
+        
+        .data-wrapper {
+            display: none;
+        }
+        .head {
+            display: none;
+        }
+    } 
+        
+    @media only screen and (max-width: 1000px){
+        .section-wrapper {
+            padding-top: 45px;
+            padding-bottom: 45px;
+            .head {
+                h1 {
+                    font-size: 42px !important;
+                }
+                h3 {
+                    font-size: 21px !important;
+                }
+            }
+            .get-info {
+                .col-md-12 {
+                    h3 {
+                        font-size: 18px !important;
+                    }
+                    span {
+                        font-size: 12px !important;
+                    }
+                }
+                input, label {
+                    font-size: 14px !important;
+                }
+                .btn-submit {
+                    font-size: 18px !important;
+                }
+            }
+            .coding {
+                h3 {
+                    font-size: 25px !important;
+                }
+                p {
+                    font-size: 17px !important;
+                }
+            }
+            .data-analytics {
+                h3 {
+                    font-size: 25px !important;
+                }
+                p {
+                    font-size: 17px !important;
+                }
+            }
+        }
+    }  
+}
+

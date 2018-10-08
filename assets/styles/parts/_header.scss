@@ -1,0 +1,87 @@
+/* HEADER */
+.header {
+    background-color: rgba(black,0.8);
+    padding: 20px 0;
+    .container {
+        .row {
+            align-items: center;
+            .logo-wrapper {
+                padding: 0 !important;
+                .logo-text {
+                    display: block;
+                    text-align: left;
+                    // margin: 0 auto; 
+                    cursor: pointer;
+                    &:hover {
+                        filter: contrast(150%);
+                    }
+                }
+                .logo {
+                    display: none;
+                    margin: 0 auto; 
+                }
+            }  
+            .call-us-wrapper {
+                color:white;
+                font-size: 18px;
+                font-weight: bold;
+                padding: 0 !important;
+                span {
+                    @include fonts(18px,$robotoSlab,$light-grey,400,none);
+                    a {
+                        text-decoration-line: none !important;
+                        span {
+                            @include fonts(18px,$robotoSlab,$blue,bold,none);
+                            &:hover {
+                                color:$blue-hover;
+                            }
+                        }
+                    }
+                }
+                .br2 {
+                    display: none;
+                }
+            }  
+        }
+    }
+    // viewport min 769px
+    @media only screen and (min-width: 769px) {
+        .container {
+            .row {
+                .call-us-wrapper{
+                    text-align: right; 
+                }
+            }
+        }
+    }
+    // viewport max 768px
+    @media only screen and (max-width: 768px) {
+        display: none;
+        background-color: rgba(black,1);
+        .container {
+            text-align: center;
+            .row {
+                .logo-wrapper {
+                    display: block;
+                    margin: 0 auto;
+                    order: 2;
+                    width: 40%;
+                    height: 40%;
+                } 
+                .call-us-wrapper {
+                    order: 1;
+                    padding-bottom: 5px;
+                    span {
+                        .br1 {
+                            display: none;
+                        }
+                        a {
+                            span {
+                            }
+                        }
+                    }
+                }
+            }   
+        }
+    }
+}

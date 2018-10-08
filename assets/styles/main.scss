@@ -1,0 +1,26 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab');
+    $roboto: 'Roboto', sans-serif;
+$robotoSlab: 'Roboto Slab', serif;
+
+// Parts
+@import 'parts/colors';
+@import 'parts/mixins';
+@import 'parts/header';
+@import 'parts/section1';
+@import 'parts/headerHidden';
+@import 'parts/section1Hidden';
+// featuring
+@import 'parts/section2';
+// our history
+@import 'parts/section3';
+// faq
+@import 'parts/section4';
+// footer
+@import 'parts/footer';
+
+
+
+
+
+

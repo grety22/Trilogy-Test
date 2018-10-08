@@ -1,0 +1,120 @@
+/* Section Two */ /* Featuring */
+.section2 {
+    padding: 45px !important;
+    background-image: url("../images/featuring.jpg");
+    @include sections(100%,100%,cover,no-repeat,bottom);
+    .container {
+        .featuring-head {
+            text-align: center;
+            h1 {
+                @include fonts(40px,$roboto,white,500,underline);
+            }
+        }
+        .row {
+             text-align: center;
+            align-items: center;
+            .featuring-column1 {
+                order:1;
+            }
+            .featuring-column1, .featuring-column3 {
+                .col-12 {
+                    .card {
+                        cursor: pointer;
+                        background-color: transparent !important;
+                        box-shadow: none !important;
+                        text-align: center;
+                           display: block;
+                        img {
+                            max-width: 100px !important;
+                        }
+                        .card-body {
+                            p {
+                                @include fonts(18px,$robotoSlab,white,400,none);
+                            }
+                        }
+                        &:hover {
+                            img {
+                                filter: brightness(0.4);
+                            }
+                            .card-body {
+                                p {
+                                    color: $light-grey;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .featuring-column2 {
+                order:2;
+                .phone {
+                    cursor: pointer;
+                    &:hover {
+                        filter: drop-shadow(16px 16px 20px $brown);
+                    }
+                }
+            }
+            .featuring-column3 {
+                order:3;
+            }
+        }
+        .featuring-bottom {
+            text-align: center;
+            p {
+                @include fonts(16px,$roboto,$light-grey,300,none);
+            }
+        }
+    }  
+    @media only screen and (max-width: 1000px) {
+        .container {
+            .featuring-head {
+                h1 {
+                    font-size: 38px;
+                }
+            }
+            .row {
+                align-items: center;
+                .featuring-column1 {
+                    order:1;
+                }
+                .featuring-column1, .featuring-column3 {
+                    .col-12 {
+                        .card {
+                            img {
+                                max-width: 90px !important;
+                            }
+                            .card-body {
+                                p {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .featuring-bottom {
+                p {
+                    font-size: 16px;
+                }
+            }
+        }         
+    }
+    @media only screen and (max-width: 768px) {
+        background-image: url("../images/mobile/featuring_mobile.jpg");
+        .container {
+            .row {
+                .featuring-column1 {
+                    order:2;
+                }
+                .featuring-column2 {
+                    text-align: center;
+                    order:1;
+                    .phone {
+                        padding: 20px;
+                        max-width: 250px;
+                    }
+                }
+            }
+        }         
+    }
+}

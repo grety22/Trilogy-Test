@@ -1,0 +1,15 @@
+@mixin fonts ($size,$family,$color,$weight,$isUnderline) {
+        color:$color;
+        font-size: $size;
+        font-family: $family;
+        font-weight: $weight;
+        text-decoration-line: $isUnderline;
+};
+
+@mixin sections ($width,$height,$backSize,$backRepeat,$backPosition){
+    width: $width;
+    height: $height;
+    background-size: $backSize;
+    background-repeat: $backRepeat;
+    background-position: $backPosition;
+}

@@ -1,0 +1,56 @@
+/* Section Two */ /* Featuring */
+.section-two {
+    @media only screen and (max-width: 1016px) {
+		.wrapper {
+            p {
+                color:red !important;
+            }
+        }
+	}
+    @include sections(100%,100%,cover,no-repeat,bottom);
+    background-image: url(/assets/images/featuring.jpg);
+    text-align: center;
+    padding: 45px !important;
+    .container {
+        .row {
+            padding: 20px;
+            .col-md-12 {
+                // featuring-head
+                h1 {
+                    text-align: center !important;
+                    @include fonts(40px,$roboto,$light-grey,bold,underline);
+                    &:hover{
+                        color:white;
+                        cursor: pointer;
+                    }
+                }
+                p {
+                    @include fonts(16px,$robotoSlab,$light-grey,400,none);
+                }
+            }
+            .col-md-4 {
+                .wrapper {
+                    height: 300px !important;
+                    .featuring-icon {
+                        width: 30%;
+                        height: 30%;
+                        &:hover {
+                            filter: brightness(1.5); 
+                        }
+                    }
+                    p {
+                        padding: 10px;
+                        @include fonts(16px,$robotoSlab,$light-grey,400,none);
+                        &:hover {
+                            color:white;
+                        }
+                    }
+                    .featuring-icon {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,22 @@
+/* Section Three */ /* About */
+.section3 {
+    @include sections(100%,100%,cover,no-repeat,bottom);
+    background-image: url(/assets/images/about.jpg);
+    text-align: center;
+    padding: 45px !important; 
+    .container {
+        .col-12 {
+            h1 {
+                @include fonts(40px,$roboto,$blue,500,underline);
+                &:hover{
+                    color: $blue-hover;
+                    cursor: pointer;
+                }
+            }
+            p {
+                @include fonts(23px,$robotoSlab,$light-grey,300,none);
+            }
+        }
+    }
+
+}

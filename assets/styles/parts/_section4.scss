@@ -1,0 +1,89 @@
+/* Section Four */ /* FAQ */
+// hide default box shadow
+.hideDBS {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border:0 !important;
+}
+
+.hideImg {
+    display: none;
+}
+
+.section4 {
+    @include sections(100%,100%,cover,no-repeat,bottom);
+    background-image: url("../images/faq.jpg");
+    background-attachment: fixed;
+    text-align: left;
+    color: $brown;
+    .container {
+        .row {
+            align-items: center;
+            .faq-container {
+                margin-top: 45px;
+                margin-bottom: 500px;
+                h1 {
+                    @include fonts(40px,$roboto,$brown,500,underline);
+                    &:hover{
+                        color: $blue;
+                        cursor: pointer;
+                    }
+                }
+                .accordion {
+                    .card {
+                        @extend .hideDBS;
+                        .card-header {
+                            @extend .hideDBS;
+                            vertical-align: middle !important;
+                            padding: 0 !important;
+                            a {
+                                // question
+                                .question {
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: flex-start;
+                                    margin-bottom: 0 !important;
+                                    // accordion-icon
+                                    img {
+                                        max-width: 20px;
+                                        top: 0;
+                                    }
+                                    p {
+                                        padding-bottom: 0 !important;
+                                        @include fonts(18px,$robotoSlab,$brown,300,none);
+                                    }
+                                }
+                            }
+                        }
+                        .collapse {
+                            // line-height: 1.3em;
+                            .card-body {
+                                // padding: 0 !important;
+                                margin:0 !important;
+                                ul {
+                                    li {
+                                        // @include fonts(16px,$robotoSlab,$brown,300,none);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }   
+            }
+        }
+    }
+    @media only screen and (max-width: 1000px) {
+        .container {
+            .row {
+                .faq-container {
+                    padding: 0 20px;
+                    h1 {
+                        font-size: 32px;
+                    }
+                }
+            }
+        }
+        background-attachment: unset;
+        background-image: url("../images/mobile/fap_mobile.jpg");
+    }    
+}

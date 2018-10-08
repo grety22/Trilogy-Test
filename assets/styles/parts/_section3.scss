@@ -1,0 +1,38 @@
+/* Section Three */ /* Our History */
+.section3 {
+    @include sections(100%,100%,cover,no-repeat,bottom);
+    background-image: url("../images/about.jpg");
+    text-align: center;
+    padding: 45px !important; 
+    .container {
+        .our-history-wrapper {
+            text-align: center;
+            h1 {
+                @include fonts(40px,$roboto,$blue,500,underline);
+                &:hover{
+                    color: $blue-hover;
+                    cursor: pointer;
+                }
+            }
+            p {
+                @include fonts(23px,$robotoSlab,$light-grey,200,none);
+            }
+        }
+    }
+    @media only screen and (max-width: 520px) {
+        @include sections(100%,100%,cover,no-repeat,bottom);
+        background-image: url("../images/mobile/about_mobile.jpg");
+        .container {
+            .our-history-wrapper {
+                text-align: center;
+                h1 {
+                    font-size: 30px;
+                }
+                p {
+                    font-size: 16px;
+                }
+            }
+        }    
+    }
+
+}

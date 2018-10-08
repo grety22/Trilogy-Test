@@ -1,0 +1,67 @@
+/* Section Four */ /* FAQ */
+// hide default box shadow
+.hideDBS {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border:0 !important;
+}
+.section-four {
+    @media only screen and (min-width: 1000px) {
+		background: $white;
+	}
+    @include sections(100%,100%,cover,no-repeat,bottom);
+    background-image: url(/assets/images/faq.jpg);
+    text-align: left;
+    padding: 45px !important;
+    color: $brown;
+    .container {
+        .row {
+            .col-md-6 {
+                h1 {
+                    @include fonts(40px,$roboto,$brown,500,underline);
+                    &:hover{
+                        color: $blue;
+                        cursor: pointer;
+                    }
+                }
+                #accordionEx {
+                    .card {
+                        @extend .hideDBS;
+                        .card-header {
+                            @extend .hideDBS;
+                            vertical-align: middle !important;
+                            padding: 0 !important;
+                            a {
+                                // question
+                                .question {
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: flex-start;
+                                    padding: 0 !important;
+                                    // accordion-icon
+                                    img {
+                                        max-width: 20px;
+                                        top: 0;
+                                    }
+                                    p {
+                                        @include fonts(18px,$robotoSlab,$brown,300,none);
+                                    }
+                                }
+                            }
+                        }
+                        .collapse {
+                            .card-body {
+                                margin:0 !important;
+                                ul {
+                                    li {
+                                        @include fonts(16px,$robotoSlab,$brown,300,none);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }   
+            }
+        }
+    }
+}
