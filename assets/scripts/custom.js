@@ -5,8 +5,8 @@ $( document ).ready(function() {
         $(this).find('.right').toggleClass('hideImg');
         $(this).find('.down').toggle();
     });
-    // button CONTINUE
-    $("#get-info-btn").click(function(){
+    // button CONTINUE msg
+    $("#get-info-btn").click(function(event){
         event.preventDefault();
         swal("Thanks Trilogy!", "Your information will be processed", "success");
     })
