@@ -805,7 +805,7 @@
 
 .section4 .container .row .faq-container {
   margin-top: 45px;
-  margin-bottom: 500px;
+  margin-bottom: 400px;
 }
 
 .section4 .container .row .faq-container h1 {
@@ -862,14 +862,18 @@
 
 @media only screen and (max-width: 1000px) {
   .section4 {
-    background-attachment: unset;
+    background-color: #DCDCDC !important;
+    background-attachment: scroll;
+    background-size: 360px auto;
     background-image: url("../images/mobile/fap_mobile.jpg");
   }
   .section4 .container .row .faq-container {
+    margin-bottom: 240px;
     padding: 0 20px;
   }
   .section4 .container .row .faq-container h1 {
     font-size: 32px;
+    text-align: center;
   }
 }
 

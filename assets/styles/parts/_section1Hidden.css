@@ -1,0 +1,57 @@
+/* Section Hidden */
+.section1Hidden {
+  display: none;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.section1Hidden #carouselExampleControls .carousel-inner .carousel-item .carousel-caption {
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: initial;
+}
+
+.section1Hidden #carouselExampleControls .carousel-inner .carousel-item .carousel-caption h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.section1Hidden #carouselExampleControls .carousel-inner .carousel-item .carousel-caption h3, .section1Hidden #carouselExampleControls .carousel-inner .carousel-item .carousel-caption p {
+  font-size: 20px;
+}
+
+.section1Hidden #carouselExampleControls .carousel-inner .carousel-item .carousel-caption p {
+  text-justify: distribute;
+}
+
+.section1Hidden #carouselExampleControls .carousel-inner .carousel-item .carousel-caption hr {
+  border: solid 3px blueviolet;
+  margin-top: 0 !important;
+  margin-bottom: 5px !important;
+}
+
+@media only screen and (max-width: 770px) {
+  .section1Hidden {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .section1Hidden {
+    display: block;
+  }
+  .section1Hidden #carouselExampleControls .carousel-inner .carousel-item .carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial;
+  }
+  .section1Hidden #carouselExampleControls .carousel-inner .carousel-item .carousel-caption h1 {
+    font-size: 20px;
+  }
+  .section1Hidden #carouselExampleControls .carousel-inner .carousel-item .carousel-caption h3, .section1Hidden #carouselExampleControls .carousel-inner .carousel-item .carousel-caption p {
+    font-size: 15px;
+  }
+  .section1Hidden #carouselExampleControls .carousel-inner .carousel-item .carousel-caption hr {
+    border: solid 2px blueviolet;
+  }
+}

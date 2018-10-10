@@ -21,7 +21,7 @@
             align-items: center;
             .faq-container {
                 margin-top: 45px;
-                margin-bottom: 500px;
+                margin-bottom: 400px;
                 h1 {
                     @include fonts(40px,$roboto,$brown,500,underline);
                     &:hover{
@@ -76,14 +76,18 @@
         .container {
             .row {
                 .faq-container {
+                    margin-bottom: 240px;
                     padding: 0 20px;
                     h1 {
                         font-size: 32px;
+                        text-align: center;
                     }
                 }
             }
         }
-        background-attachment: unset;
+        background-color:  $faq-bg !important;
+        background-attachment: scroll;
+        background-size: 360px auto;
         background-image: url("../images/mobile/fap_mobile.jpg");
     }    
 }
